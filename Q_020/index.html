@@ -1,0 +1,32 @@
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q_020</title>
+  </head>
+  <body style="padding: 30px 20px;">
+    <h3>
+      공백으로 구분하여 두 숫자가 주어집니다. <br />
+      두번째 숫자로 첫번째 숫자를 나누었을 때 그 몫과 나머지를 공백으로 구분하여
+      출력하세요.
+    </h3>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+    <script>
+      "use strict";
+      const num = prompt("숫자를 입력해주세요").split(" ");
+
+      const reducer = (num) => {
+        const _num = num.map((v, i) => {
+          return parseInt(v, 10);
+        });
+        console.log(Math.floor(_num[0] / _num[1]), _num[0] % _num[1]);
+      };
+
+      reducer(num);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q_016</title>
+  </head>
+  <body style="padding: 30px 20px;">
+    <h3>
+      문장이 입력되면 거꾸로 출력하는 프로그램을 만들어 봅시다.
+    </h3>
+    <pre>
+        <code>
+        입출력
+
+        입력 : 거꾸로
+        출력 : 로꾸거
+        </code>
+    </pre>
+    <script>
+      "use strict";
+      const _string = prompt(`문장을 입력해주세요`);
+
+      const reverseString = _string.split("").reverse().join("");
+      console.log(reverseString);
+    </script>
+  </body>
+</html>
