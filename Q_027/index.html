@@ -1,0 +1,40 @@
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q_27</title>
+  </head>
+  <body style="padding: 30px 20px;">
+    <h3>
+      첫번째 입력에서는 학생의 이름이 공백으로 구분되어 입력되고, 두번째에는 그
+      학생의 수학 점수가 공백으로 구분되어 주어집니다. <br />
+      <br />
+      두 개를 합쳐 **학생의 이름이 key**이고 **value가 수학 점수**인 객체를
+      출력해주세요.
+    </h3>
+    <pre>
+      <code>
+      **입력**
+      Yujin Hyewon
+      70 100
+      
+      **출력**
+      {'Yujin': 70, 'Hyewon': 100}
+      </code>
+    </pre>
+    <script>
+      "use strict";
+      const n = prompt("이름을 입력");
+      const s = prompt("점수를 입력");
+
+      const name = n.split(" ");
+      const score = s.split(" ");
+
+      const obj = new Object();
+      for (let i = 0; i < name.length; i++) {
+        obj[name[i]] = parseInt(score[i], 10);
+      }
+      console.log(obj);
+    </script>
+  </body>
+</html>
