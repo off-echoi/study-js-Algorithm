@@ -27,17 +27,17 @@
       let winner = "";
 
       n.forEach((v, i) => {
-        console.log(result);
+        console.log(result[v], v, result);
         if (result[v] === undefined) {
           result[v] = 1;
         } else {
-          result[v] += 1;
+          result[v]++;
         }
         // result[val] = result[val] === undefined ? 1 : (result[val] = result[val] + 1);
       });
 
-      winner = Object.keys(result).reduce((a, b) => {
-        return result[a] > result[b] ? a : b;
+      winner = Object.keys(result).reduce((prev, next) => {
+        return result[prev] > result[next] ? prev : next;
       });
 
       console.log(`${winner}(이)가 총 ${result[winner]}표로 반장이 되었습니다.`);
