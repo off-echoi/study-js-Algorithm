@@ -25,19 +25,17 @@
       const scores = [97, 86, 75, 66, 55, 97, 85, 97, 97, 95].map(function (n) {
         return parseInt(n, 10);
       });
+      // 상위 3등이 총 몇명인지
 
-      scores.sort((a, b) => {
-        return a - b;
-      });
+      scores.sort((a, b) => a - b);
+
+      let tops = [];
       let count = 0;
-      let arr = [];
 
-      while (arr.length < 3) {
-        console.log(arr);
-        let n = scores.pop();
-        console.log(n);
-        if (!arr.includes(n)) {
-          arr.push(n);
+      while (tops.length < 3) {
+        const n = scores.pop();
+        if (!tops.includes(n)) {
+          tops.push(n);
         }
         count++;
       }

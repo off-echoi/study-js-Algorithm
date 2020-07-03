@@ -25,22 +25,20 @@
       const n = ["원범", "원범", "혜원", "혜원", "혜원", "유진", "유진", undefined, "혜원"];
       let result = {};
       let winner = "";
-
-      n.forEach((v, i) => {
-        console.log(result[v], v, result);
+      // 각 몇표를 받았고, 누가 제일 높은지
+      n.forEach((v) => {
         if (result[v] === undefined) {
           result[v] = 1;
         } else {
-          result[v]++;
+          result[v] += 1;
         }
-        // result[val] = result[val] === undefined ? 1 : (result[val] = result[val] + 1);
+        console.log(result);
       });
-
-      winner = Object.keys(result).reduce((prev, next) => {
-        return result[prev] > result[next] ? prev : next;
+      winner = Object.keys(result).reduce((a, b) => {
+        console.log(a);
+        return result[a] > result[b] ? a : b;
       });
-
-      console.log(`${winner}(이)가 총 ${result[winner]}표로 반장이 되었습니다.`);
+      console.log(`${winner}(이)가 ${result[winner]}표로 당선되었습니다`);
     </script>
   </body>
 </html>
