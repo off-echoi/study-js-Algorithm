@@ -1,0 +1,55 @@
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q_43</title>
+  </head>
+  <body style="padding: 30px 20px;">
+    <h3>
+      우리가 흔히 사용하는 숫자 1, 8, 19, 28893 등등...은 10진수 체계입니다. <br />
+      이를 컴퓨터가 알아 들을 수 있는 2진수로 바꾸려고 합니다. 어떻게 해야할까요?<br />
+      <br />
+      **사용자에게 숫자를 입력받고 이를 2진수를 바꾸고 그 값을 출력해주세요.**
+    </h3>
+    <pre>
+      <code>
+      </code>
+    </pre>
+    <script>
+      "use strict";
+      // const n = prompt("10진수를 입력해주세요");
+      // let dec = parseInt(n, 10);
+      // // console.log("2진수로 변환되었습니다.", dec.toString(2));
+      // let result = [];
+      // while (dec / 2 >= 1) {
+      //   result.push(dec % 2);
+      //   dec = Math.floor(dec / 2);
+      //   if (dec === 2) {
+      //     result.push(10);
+      //     break;
+      //   } else if (dec === 1) {
+      //     result.push(1);
+      //     break;
+      //   }
+      // }
+      // console.log(result.reverse().join(""));
+
+      let a = prompt("10진수를 입력해주세요.");
+      let b = [];
+      let result = "";
+
+      while (a) {
+        b.push(a % 2);
+        a = parseInt(a / 2, 10);
+        console.log(a);
+      }
+      b.reverse();
+
+      b.forEach((n) => {
+        result += n;
+      });
+
+      console.log(result);
+    </script>
+  </body>
+</html>
