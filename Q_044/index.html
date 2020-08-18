@@ -1,0 +1,49 @@
+<html lang="ko-kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q_44</title>
+  </head>
+  <body style="padding: 30px 20px;">
+    <h3>
+      사용자가 입력한 양의 정수의 각 자리수의 합을 구하는 프로그램을 만들어주세요
+      <br />
+      예를들어
+      <br />
+      18234 = 1+8+2+3+4 이고 정답은 18 입니다. <br />
+      3849 = 3+8+4+9 이고 정답은 24입니다.
+    </h3>
+    <pre>
+      <code>
+입출력
+
+입력 : 18234
+출력 : 18
+
+입력 : 3849
+출력 : 24
+      </code>
+    </pre>
+    <script>
+      "use strict";
+      let number = prompt("숫자를 입력해주세요");
+      /** 스스로 푼 코드 */
+      // const numberArray = number.split("");
+      // const sum = numberArray.reduce((a, b) => {
+      //   return Number(a) + Number(b);
+      // });
+
+      // console.log(sum);
+
+      /** 답안코드 */
+      let sum = 0;
+      while (number !== 0) {
+        sum += number % 10;
+        console.log(number, sum, ":::::");
+        number = Math.floor(number / 10);
+        console.log(number);
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>
